@@ -1,6 +1,8 @@
+Easybank landing page.
+
 Made with React and styled-components.
 Mobile First.
 
 preview: easybankks.netlify.app
 
-Work in progress...
+design: bit.ly/3Ekbrvi
