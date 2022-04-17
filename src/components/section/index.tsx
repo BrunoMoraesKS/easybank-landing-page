@@ -5,11 +5,12 @@ interface ISectionProps {
   title: string;
   paragraph: string;
   button?: React.ReactNode;
+  align?: "left" | "center";
 }
 
-const Section = ({ title, paragraph, button }: ISectionProps) => {
+const Section = ({ title, paragraph, button, align }: ISectionProps) => {
   return (
-    <S.Container>
+    <S.Container align={align}>
       <S.Title>{title}</S.Title>
       <S.Paragraph>{paragraph}</S.Paragraph>
       {button}

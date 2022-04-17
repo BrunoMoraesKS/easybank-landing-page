@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, weight } from "../../global/styles";
+import { breakpoints, colors, weight } from "../../global/styles";
 
 export const Container = styled.footer`
   position: absolute;
@@ -15,10 +15,30 @@ export const Container = styled.footer`
   padding: 32px 0;
 
   background: ${colors.darkBlue};
+
+  @media (min-width: ${breakpoints.md}) {
+    height: 200px;
+    flex-direction: row;
+
+    justify-content: space-around;
+  }
 `;
 
 export const Logo = styled.img`
-  width: 30%;
+  width: 120px;
+`;
+
+export const LogoIconsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+
+  @media (min-width: ${breakpoints.md}) {
+    align-items: flex-start;
+
+    gap: 48px;
+  }
 `;
 
 export const IconsContainer = styled.div`
@@ -28,6 +48,10 @@ export const IconsContainer = styled.div`
 
 export const Icon = styled.img`
   width: 25px;
+
+  @media (min-width: ${breakpoints.md}) {
+    width: 18px;
+  }
 `;
 
 export const Ul = styled.ul`
@@ -35,9 +59,15 @@ export const Ul = styled.ul`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 24px;
 
   list-style: none;
+
+  @media (min-width: ${breakpoints.md}) {
+    flex-wrap: wrap;
+    height: 75%;
+    align-items: flex-start;
+  }
 `;
 
 export const Li = styled.li`
@@ -45,6 +75,24 @@ export const Li = styled.li`
 
   color: ${colors.white};
   font-weight: ${weight.small};
+
+  @media (min-width: ${breakpoints.md}) {
+    color: ${colors.grayishBlue};
+    margin-right: 240px;
+    margin-left: -128px;
+  }
 `;
 
 export const Span = styled.span``;
+
+export const ButtonCopyrightContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+
+  @media (min-width: ${breakpoints.md}) {
+    align-items: flex-end;
+    gap: 16px;
+  }
+`;

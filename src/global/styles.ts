@@ -44,6 +44,12 @@ export const GlobalStyles = styled.createGlobalStyle`
     scroll-behavior: smooth;
   }
 
+  body {
+    overflow-x: hidden;
+    max-width: 1440px;
+    margin: auto;
+  }
+
   a {
     color: inherit;
     text-decoration: none;
