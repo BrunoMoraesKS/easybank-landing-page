@@ -33,7 +33,13 @@ export const Image = styled.img`
 
 export const Writter = styled.span``;
 
-export const Title = styled.h4``;
+export const Title = styled.h4`
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    color: ${colors.limeGreen};
+  }
+`;
 
 export const Paragraph = styled.p`
   line-height: 20px;
