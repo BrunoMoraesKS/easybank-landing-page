@@ -1,5 +1,10 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { breakpoints, colors } from "../../global/styles";
+
+import { bounceInRight, bounceInLeft } from "react-animations";
+
+const bounceRightAnimation = keyframes`${bounceInRight}`;
+const bounceLeftAnimation = keyframes`${bounceInLeft}`;
 
 export const Container = styled.div`
   display: flex;
@@ -28,6 +33,8 @@ export const PresentationSectionContainer = styled.div`
   max-width: 1440px;
   display: flex;
   flex-direction: column;
+
+  animation: 1s ${bounceLeftAnimation};
 
   @media (min-width: ${breakpoints.sm}) {
     width: 50%;
@@ -72,6 +79,8 @@ export const Phones = styled.img`
   margin-top: 70px;
   margin-bottom: 25px;
   z-index: 10;
+
+  animation: 1s ${bounceRightAnimation};
 
   overflow: hidden;
 

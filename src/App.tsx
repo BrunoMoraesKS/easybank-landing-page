@@ -9,7 +9,13 @@ const Footer = lazy(() => import("./components/footer"));
 function App() {
   return (
     <S.Container>
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense
+        fallback={
+          <S.LoadingContainer>
+            <h1>Loading...</h1>
+          </S.LoadingContainer>
+        }
+      >
         <GlobalStyles />
         <Header />
         <Home />
