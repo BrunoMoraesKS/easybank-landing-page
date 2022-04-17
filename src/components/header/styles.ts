@@ -174,9 +174,20 @@ export const Li = styled.li`
   color: ${colors.darkBlue};
   font-weight: ${weight.large};
 
+  cursor: pointer;
+
   z-index: 9999;
 
   @media (min-width: ${breakpoints.sm}) {
     color: ${colors.grayishBlue};
+
+    &:hover {
+      border-bottom: 4px solid ${colors.limeGreen};
+      border-radius: 1px;
+
+      position: relative;
+      padding-bottom: 27px;
+      top: 16px;
+    }
   }
 `;

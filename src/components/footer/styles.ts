@@ -76,10 +76,18 @@ export const Li = styled.li`
   color: ${colors.white};
   font-weight: ${weight.small};
 
+  cursor: pointer;
+
   @media (min-width: ${breakpoints.md}) {
     color: ${colors.grayishBlue};
     margin-right: 240px;
     margin-left: -128px;
+  }
+
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    color: ${colors.limeGreen};
   }
 `;
 
